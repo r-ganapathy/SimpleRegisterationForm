@@ -1,0 +1,117 @@
+<html>
+  <head>
+	<!--CSS LINK-->
+	<link rel="stylesheet" href="styles.css">
+  
+    <title>Registration Form</title>
+	<!--Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	<!--fontfamily -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
+	<!--Javascript-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+	
+	<!--Favocon-->
+	<link rel="icon" href="favicon.ico">
+    </head>
+	<body>
+  
+		<section id="formsection">
+			<div class="container">
+				<h3>Registration Form</h3>
+				
+				<form class="form123" name="myForm" onsubmit="return validateForm()"> 
+					<div class="row">
+					
+						<div class="col-lg-5 col-sm-12 row1">
+							<label for="fnameid">First Name</label>
+							<input type="text" class="form-control" value="" id="fnameid">
+						</div>
+						
+						<div class="col-lg-5 row1">
+							<label for="lnameid">Last Name</label>
+							<input type="text" class="form-control" value="" id="lnameid">
+						</div>
+						
+					</div>
+    
+					<div class="row">
+					
+						<div class="col-lg-5 ro1">
+							<label for="birthid">Birthday</label>
+								<br>
+							<input type="datetime-local" class="form-control" value="" id="birthid">
+						</div>
+      
+						<div class="col-lg-5 row1">
+							<label class="gender1">Gender</label>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input radion" value="Male">
+									<label class="custom-control-label" for="customRadioInline1">Male</label>
+								</div>
+    
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="">
+									<label class="custom-control-label" for="customRadioInline2">Female</label>
+								</div>
+						</div>
+					</div>
+ 
+					<div class="row">
+					
+						<div class="col-lg-5 row1">
+							<label for="emailid">Email address</label>
+							<input type="email" class="form-control" value="" id="emailid">
+						</div>
+ 
+						<div class="col-lg-5 row1">
+							<label for="phnid" class="phone1">Phone Number</label>
+							<input type="text" class="form-control" value="" id="phnid">
+						</div>
+					</div>
+    
+					<div class="row">
+					
+						<div class="col-lg-10 row1">
+							<label for="subid">Subject</label>
+								<select class="form-control" id="subid">
+									<option value="" ></option>
+									<option value="Tamil" >Tamil</option>
+									<option value="English" >English</option>
+
+								</select>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-primary btn-lg button1">Submit</button>
+				</form>
+			</div>
+		</section>
+ 
+		<!--Javascript LINK-->
+		<script> function validateForm() {
+  let x1 = document.forms["myForm"]["fnameid"].value;
+  let x2 = document.forms["myForm"]["lnameid"].value;
+  let x3 = document.forms["myForm"]["birthid"].value;
+  let x4 = document.forms["myForm"]["emailid"].value;
+  let x5 = document.forms["myForm"]["phnid"].value;
+  let x6 = document.forms["myForm"]["subid"].value;
+  let x7 = document.forms["myForm"]["customRadioInline1"].value;
+  let x8 = document.forms["myForm"]["customRadioInline2"].value;
+
+  if (x1 == "" || x2 == "" || x3 == "" || x4 == "" || x5 == "" || x6 == "") {
+    alert("Please must be fill all");
+    return false;
+  }
+ if(x7 == "" && x8 == ""){
+	 alert("Please must be fill all");
+	 return false;
+ }
+}</script>
+		
+    </body>
+</html>
