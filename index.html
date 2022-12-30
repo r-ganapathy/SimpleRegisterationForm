@@ -1,6 +1,17 @@
 <html>
   <head>
+	<meta charset="UTF-8">
+	<!--For SEO-->
+	<meta name="keywords" content="form,registration">
+	<!--for Description-->
+	<meta name="description" content="RegistrationForm">
+	<!--for author-->
+	<meta name="Coder" content="Anonymous">
+	<!--for Refresh-->
+	<meta http-equiv="refresh" content="30">
+	<!--for Responsiveness-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<!--CSS LINK-->
 	<link rel="stylesheet" href="styles.css">
   
@@ -29,35 +40,35 @@
 				<form class="form123" name="myForm" onsubmit="return validateForm()"> 
 					<div class="row">
 					
-						<div class="col-lg-5 col-sm-12 row1">
+						<div class="col-lg-5 col-sm-12 row1 form-group">
 							<label for="fnameid">First Name</label>
-							<input type="text" class="form-control" value="" id="fnameid">
+							<input type="text" class="form-control" value="" id="fnameid" name="firstName">
 						</div>
 						
-						<div class="col-lg-5 row1">
+						<div class="col-lg-5 row1 form-group">
 							<label for="lnameid">Last Name</label>
-							<input type="text" class="form-control" value="" id="lnameid">
+							<input type="text" class="form-control" value="" id="lnameid" name="lastName">
 						</div>
 						
 					</div>
     
 					<div class="row">
 					
-						<div class="col-lg-5 ro1">
+						<div class="col-lg-5 ro1 form-group">
 							<label for="birthid">Birthday</label>
 								<br>
-							<input type="datetime-local" class="form-control" value="" id="birthid">
+							<input type="date" class="form-control" value="" id="birthid" name="birth">
 						</div>
       
-						<div class="col-lg-5 row1">
+						<div class="col-lg-5 row1 form-group">
 							<label class="gender1">Gender</label>
 								<div class="custom-control custom-radio custom-control-inline">
-									<input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input radion" value="Male">
+									<input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input radion" value="Male" name="gender">
 									<label class="custom-control-label" for="customRadioInline1">Male</label>
 								</div>
     
 								<div class="custom-control custom-radio custom-control-inline">
-									<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="">
+									<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" value="Female" name="gender">
 									<label class="custom-control-label" for="customRadioInline2">Female</label>
 								</div>
 						</div>
@@ -65,54 +76,56 @@
  
 					<div class="row">
 					
-						<div class="col-lg-5 row1">
+						<div class="col-lg-5 row1 form-group">
 							<label for="emailid">Email address</label>
-							<input type="email" class="form-control" value="" id="emailid">
+							<input type="email" class="form-control" value="" id="emailid" name="email">
 						</div>
  
-						<div class="col-lg-5 row1">
+						<div class="col-lg-5 row1 form-group">
 							<label for="phnid" class="phone1">Phone Number</label>
-							<input type="text" class="form-control" value="" id="phnid">
+							<input type="text" class="form-control bfh-phone" name="phnid" id="phnid" pattern="[0-9]{10}" title="Enter 10 digit mobile number" name="number">
 						</div>
 					</div>
     
 					<div class="row">
 					
-						<div class="col-lg-10 row1">
+						<div class="col-lg-10 row1 form-group">
 							<label for="subid">Subject</label>
-								<select class="form-control" id="subid">
+								<select class="form-control custom-select" id="subid">
 									<option value="" ></option>
 									<option value="Tamil" >Tamil</option>
 									<option value="English" >English</option>
 
 								</select>
+								 <div class="invalid-feedback">Example invalid custom select feedback</div>
+
 						</div>
 					</div>
 					<button type="submit" class="btn btn-primary btn-lg button1">Submit</button>
 				</form>
 			</div>
 		</section>
- 
+		
 		<!--Javascript LINK-->
 		<script> function validateForm() {
-  let x1 = document.forms["myForm"]["fnameid"].value;
-  let x2 = document.forms["myForm"]["lnameid"].value;
-  let x3 = document.forms["myForm"]["birthid"].value;
-  let x4 = document.forms["myForm"]["emailid"].value;
-  let x5 = document.forms["myForm"]["phnid"].value;
-  let x6 = document.forms["myForm"]["subid"].value;
-  let x7 = document.forms["myForm"]["customRadioInline1"].value;
-  let x8 = document.forms["myForm"]["customRadioInline2"].value;
+			let x1 = document.forms["myForm"]["fnameid"].value;
+			let x2 = document.forms["myForm"]["lnameid"].value;
+			let x3 = document.forms["myForm"]["birthid"].value;
+			let x4 = document.forms["myForm"]["emailid"].value;
+			let x5 = document.forms["myForm"]["phnid"].value;
+			let x6 = document.forms["myForm"]["subid"].value;
+			let x7 = document.forms["myForm"]["customRadioInline1"].value;
+			let x8 = document.forms["myForm"]["customRadioInline2"].value;
 
-  if (x1 == "" || x2 == "" || x3 == "" || x4 == "" || x5 == "" || x6 == "") {
-    alert("Please must be fill all");
-    return false;
-  }
- if(x7 == "" && x8 == ""){
-	 alert("Please must be fill all");
-	 return false;
- }
-}</script>
+			if (x1 == "" || x2 == "" || x3 == "" || x4 == "" || x5 == "" || x6 == "") {
+				alert("Please must be fill all");
+				return false;
+			}
+			if(x7 == "" && x8 == ""){
+				alert("Please must be fill all");
+				return false;
+			}
+}		</script>
 		
     </body>
 </html>
